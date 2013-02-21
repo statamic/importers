@@ -1,9 +1,9 @@
 <?php
 // USAGE: php convert.php
 
-// Edit the details below to your neds
+// Edit the details below to your needs
 $wp_file = 'data/mb.xml';
-$export_folder = 'content/'; // existing files will be over-written use with care
+$export_folder = 'content/'; // existing files will be over-written, use with care
 
 if (file_exists($wp_file)) {
   $xml = simplexml_load_file($wp_file);
@@ -19,7 +19,7 @@ if (file_exists($wp_file)) {
     $file_name = $export_folder.date("Y-m-d-Hi", $item_date)."-".slugify($title).".md";
 
     if ($title == '') {
-        $title = 'untitled post';
+        $title = 'Untitled post';
     }
 
     foreach($item->category as $taxonomy) {
@@ -51,7 +51,7 @@ if (file_exists($wp_file)) {
   }
 }
 
-// credit: http://sourcecookbook.com/en/recipes/8/function-to-slugify-strings-in-php
+// Credit: http://sourcecookbook.com/en/recipes/8/function-to-slugify-strings-in-php
 function slugify($text)
 {
     // replace non letter or digits by -
