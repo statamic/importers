@@ -5,6 +5,10 @@
 $wp_file = 'data/mb.xml';
 $export_folder = 'content/'; // existing files will be over-written, use with care
 
+// un-comment the following two lines to see errors
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);  
+
 if (file_exists($wp_file)) {
   $xml = simplexml_load_file($wp_file);
   $count = 0;
