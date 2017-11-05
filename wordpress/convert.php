@@ -16,7 +16,7 @@ if (file_exists($wp_file)) {
     $tags = array();
     $categories = array();
     $item_date = strtotime($item->pubDate);
-    $file_name = $export_folder.date("Y-m-d-Hi", $item_date)."-".slugify($title).".md";
+    $file_name = $export_folder.date("Y-m-d-Hi", $item_date).".".slugify($title).".md";
 
     if ($title == '') {
         $title = 'Untitled post';
